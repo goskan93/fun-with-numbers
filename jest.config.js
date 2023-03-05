@@ -6,6 +6,8 @@ module.exports = {
     "build",
   ],
   transform: {
-    '^.+\\.m?[tj]s?$': ['ts-jest', { useESM: true }],
+    '^.+\\.m?[tj]s?$': ['ts-jest', { 
+      tsconfig: "tsconfig.cjs.json"
+    }]
   },
 }

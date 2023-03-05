@@ -2,18 +2,29 @@
   "name": "@gooseen/fun-with-numbers",
   "version": "0.0.1",
   "description": "number algorithms",
-  "main": "build/src/index.js",
-  "type": "commonjs",
-  "exports": "./build/src/index.js",
-  "scripts": {
-    "start": "npm run build & node build/src/index.js",
-    "watch": "tsc -w -p .",
-    "build": "tsc",
-    "test": "jest"
+  "main": "build/cjs/src/index.js",
+  "types": "build/cjs/types/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./build/esm/types/src/index.d.ts",
+        "default": "./build/esm/src/index.js"
+      },
+      "require": {
+        "types": "./build/cjs/types/src/index.d.ts",
+        "default": "./build/cjs/src/index.js"
+      }
+    }
   },
-  "files": [
-    "build/**/*"
-  ],
+  "scripts": {
+    "start": "npm run build:cjs & node build/cjs/src/index.js",
+    "watch": "tsc -w -p .",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
+    "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "build": "npm run build:esm && npm run build:cjs",
+    "test": "jest",
+    "prepack": "npm run build"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/goskan93/fun-with-numbers.git"

@@ -1,14 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "Node16",
-
-    "moduleResolution": "node",
-    "rootDir": ".",
-    "outDir": "build",
+    "rootDir": "./",
+    "baseUrl": "./src",
     "downlevelIteration": true,
-    "esModuleInterop": true,
-    "declaration": false,
+    "declaration": true,
     "types": ["node", "jest"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,7 +15,8 @@
     "noUnusedParameters": true,
     "noImplicitAny": false,
     "noImplicitThis": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "declarationMap": true,
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "__tests__/**/*"]
