@@ -3,12 +3,13 @@
   "version": "0.0.1",
   "description": "number algorithms",
   "main": "build/src/index.js",
-  "type": "commonjs",
   "exports": "./build/src/index.js",
   "scripts": {
-    "start": "npm run build & node build/src/index.js",
+    "start": "npm run build:cjs & node build/cjs/index.js",
     "watch": "tsc -w -p .",
-    "build": "tsc",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
+    "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "build": "npm run build:esm && npm run build:cjs",
     "test": "jest"
   },
   "files": [
