@@ -4,11 +4,11 @@
   "description": "number algorithms",
   "main": "build/src/index.js",
   "type": "commonjs",
+  "exports": "./build/src/index.js",
   "scripts": {
-    "clean": "rm -rf ./build",
     "start": "npm run build & node build/src/index.js",
     "watch": "tsc -w -p .",
-    "build": "npm run clean & tsc",
+    "build": "tsc",
     "test": "jest"
   },
   "files": [
