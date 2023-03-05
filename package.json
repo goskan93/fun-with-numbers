@@ -1,5 +1,5 @@
 {
-  "name": "fun-with-numbers",
+  "name": "@gooseen/fun-with-numbers",
   "version": "0.0.1",
   "description": "number algorithms",
   "main": "build/src/index.js",
