@@ -32,6 +32,9 @@
   "bugs": {
     "url": "https://github.com/goskan93/fun-with-numbers/issues"
   },
+  "files": [
+    "build/**/*"
+  ],
   "homepage": "https://github.com/goskan93/fun-with-numbers",
   "author": "goskan93",
   "license": "ISC",
