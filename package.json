@@ -5,11 +5,23 @@
   "main": "build/src/index.js",
   "type": "commonjs",
   "scripts": {
+    "clean": "rm -rf ./build",
     "start": "npm run build & node build/src/index.js",
     "watch": "tsc -w -p .",
-    "build": "tsc",
+    "build": "npm run clean & tsc",
     "test": "jest"
   },
+  "files": [
+    "build/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goskan93/fun-with-numbers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goskan93/fun-with-numbers/issues"
+  },
+  "homepage": "https://github.com/goskan93/fun-with-numbers",
   "author": "goskan93",
   "license": "ISC",
   "devDependencies": {
