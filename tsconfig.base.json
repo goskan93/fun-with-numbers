@@ -17,6 +17,7 @@
     "noImplicitThis": false,
     "strictNullChecks": false,
     "declarationMap": true,
+    "esModuleInterop": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "__tests__/**/*"]

@@ -17,9 +17,9 @@
     }
   },
   "scripts": {
-    "start": "npm run build:cjs & node build/cjs/src/index.js",
+    "start": "npm run build:esm & node build/esm/src/index.js",
     "watch": "tsc -w -p .",
-    "build:esm": "tsc -p ./tsconfig.esm.json && ren build\\esm\\src\\index.js index.mjs",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "build": "npm run build:esm && npm run build:cjs",
     "test": "jest",
